@@ -112,9 +112,9 @@ Library/
 
 ---
 
-![CSV Export Example](https://via.placeholder.com/800x400?text=CSV+Export+Demo)
+![CSV Export Example](https://github.com/Yeldos-IT/Library-Management-System/blob/main/Resources/CSVExport.png)
 
-![Filtering Example](https://via.placeholder.com/800x400?text=Filtering+Books)
+![Filtering Example](https://github.com/Yeldos-IT/Library-Management-System/blob/main/Resources/Filters.png)
 
 ---
 
