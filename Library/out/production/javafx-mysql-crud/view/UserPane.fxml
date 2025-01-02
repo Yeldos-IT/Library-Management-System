@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.UserController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Label text="User Dashboard - Library Management System"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <HBox spacing="10">
+                <ComboBox fx:id="filterComboBox" promptText="Filter by Author" />
+                <ComboBox fx:id="yearFilterComboBox" promptText="Filter by Year" />
+                <TextField fx:id="searchField" promptText="Search" />
+            </HBox>
+            <TableView fx:id="TableView" prefHeight="400">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn" />
+                    <TableColumn text="Title" fx:id="titleColumn" />
+                    <TableColumn text="Author" fx:id="authorColumn" />
+                    <TableColumn text="Year" fx:id="yearColumn" />
+                    <TableColumn text="Pages" fx:id="pagesColumn" />
+                </columns>
+            </TableView>
+            <HBox spacing="10">
+                <Button text="Read PDF" onAction="#handleReadPDF" />
+            </HBox>
+            <Pagination fx:id="pagination" />
+        </VBox>
+    </center>
+</BorderPane>

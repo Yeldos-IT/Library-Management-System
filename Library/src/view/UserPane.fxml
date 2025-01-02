@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10; -fx-background-color: #708090;">
+            <Label prefHeight="27.0" prefWidth="425.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="User Dashboard - Library Management System" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="LogOut" textAlignment="CENTER" wrapText="true" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #D0EFFF;">
+            <HBox spacing="10">
+                <ComboBox fx:id="filterComboBox" promptText="Filter by Author" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+                <ComboBox fx:id="yearFilterComboBox" promptText="Filter by Year" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="searchField" promptText="Search" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+            </HBox>
+             <Button fx:id="readPDFButton" onAction="#handleReadPDF" style="-fx-background-color: #DCDCDC; -fx-border-color: black; -fx-border-radius: 5;" text="Read PDF" />
+            <TableView fx:id="TableView" prefHeight="400" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-radius: 5;">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="54.0" text="ID" />
+                    <TableColumn fx:id="titleColumn" prefWidth="152.0" text="Title" />
+                    <TableColumn fx:id="authorColumn" prefWidth="161.33331298828125" text="Author" />
+                    <TableColumn fx:id="yearColumn" prefWidth="84.0" text="Year" />
+                    <TableColumn fx:id="pagesColumn" prefWidth="83.33322143554688" text="Pages" />
+                </columns>
+            </TableView>
+            <HBox alignment="CENTER" spacing="10" />
+        </VBox>
+    </center>
+</BorderPane>

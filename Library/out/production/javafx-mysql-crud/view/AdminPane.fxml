@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AdminController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;">
+            <Label text="Admin Dashboard - Library Management System"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <HBox spacing="10">
+                <TextField fx:id="titleField" promptText="Book Title" />
+                <TextField fx:id="authorField" promptText="Author" />
+                <TextField fx:id="yearField" promptText="Year" />
+                <TextField fx:id="pagesField" promptText="Pages" />
+                <TextField fx:id="pdfPathField" promptText="PDF Path" />
+                <Button text="Choose File" onAction="#handleChooseFile" />
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Add Book" onAction="#handleAddBook" />
+                <Button text="Update Book" onAction="#handleUpdateBook" />
+                <Button text="Delete Book" onAction="#handleDeleteBook" />
+                <Button text="Read PDF" onAction="#handleReadPDF" />
+                <Button text="Export to CSV" onAction="#handleExport" />
+            </HBox>
+            <HBox spacing="10">
+                <ComboBox fx:id="filterComboBox" promptText="Filter by Author" />
+                <ComboBox fx:id="yearFilterComboBox" promptText="Filter by Year" />
+                <TextField fx:id="searchField" promptText="Search" />
+            </HBox>
+            <TableView fx:id="TableView" prefHeight="400">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn" />
+                    <TableColumn text="Title" fx:id="titleColumn" />
+                    <TableColumn text="Author" fx:id="authorColumn" />
+                    <TableColumn text="Year" fx:id="yearColumn" />
+                    <TableColumn text="Pages" fx:id="pagesColumn" />
+                </columns>
+            </TableView>
+            <Pagination fx:id="pagination" />
+        </VBox>
+    </center>
+</BorderPane>

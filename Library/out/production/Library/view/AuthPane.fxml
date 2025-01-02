@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20" style="-fx-padding: 20; -fx-background-color: #D0EFFF; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthController">
+    <Label prefHeight="40.0" prefWidth="500.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #000000;" text="Library Management System" />
+    <VBox spacing="15" style="-fx-padding: 10;">
+        <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="400.0" promptText="Username" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" />
+        <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="400.0" promptText="Password" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" />
+    </VBox>
+    <Label fx:id="errorLabel" prefHeight="30.0" prefWidth="500.0" style="-fx-text-fill: red; -fx-font-size: 14px;" text="" />
+    <HBox alignment="CENTER" spacing="20">
+        <Button onAction="#handleLogin" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #708090; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: white;" text="Login" />
+        <Button onAction="#handleRegister" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #4682B4; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: white;" text="Register" />
+    </HBox>
+</VBox>

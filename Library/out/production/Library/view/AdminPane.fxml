@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10; -fx-background-color: #708090;">
+            <Label prefHeight="27.0" prefWidth="814.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Admin Dashboard - Library Management System" />
+            <Button fx:id="logOutButton" onAction="#handleLogOut" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="LogOut" textAlignment="CENTER" />
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #D0EFFF;" VBox.vgrow="ALWAYS">
+            <HBox spacing="10">
+                <TextField fx:id="titleField" promptText="Book Title" style="-fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="authorField" promptText="Author" style="-fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="yearField" promptText="Year" style="-fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="pagesField" promptText="Pages" style="-fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="pdfPathField" promptText="PDF Path" style="-fx-border-color: black; -fx-border-radius: 5;" />
+                <Button onAction="#handleChooseFile" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="Choose File" />
+            </HBox>
+            <HBox spacing="10">
+                <Button onAction="#handleUpdateBook" style="-fx-background-color: #DCDCDC; -fx-border-color: black; -fx-border-radius: 5;" text="Update Book" />
+                <Button onAction="#handleAddBook" style="-fx-background-color: #DCDCDC; -fx-border-radius: 5; -fx-border-radius: 5; -fx-border-color: black;" text="Add Book" />
+                <Button onAction="#handleDeleteBook" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="Delete Book" />
+                <Button onAction="#handleReadPDF" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="Read PDF" />
+                <Button onAction="#handleExport" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" text="Export to CSV" />
+            </HBox>
+            <HBox spacing="10">
+                <ComboBox fx:id="filterComboBox" promptText="Filter by Author" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+                <ComboBox fx:id="yearFilterComboBox" promptText="Filter by Year" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+                <TextField fx:id="searchField" promptText="Search" style="-fx-background-color: #DCDCDC; -fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+            </HBox>
+            <TableView fx:id="TableView" VBox.vgrow="ALWAYS" prefHeight="400" minHeight="400" maxHeight="400" prefWidth="800" style="-fx-background-color: white;">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                    <TableColumn fx:id="titleColumn" prefWidth="200" text="Title" />
+                    <TableColumn fx:id="authorColumn" prefWidth="150" text="Author" />
+                    <TableColumn fx:id="yearColumn" prefWidth="80" text="Year" />
+                    <TableColumn fx:id="pagesColumn" prefWidth="80" text="Pages" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
