@@ -46,6 +46,8 @@ Library/
 │   │   ├── AdminController.java    # Handles admin-related functionalities
 │   │   ├── AuthController.java     # Handles user authentication
 │   │   └── UserController.java     # Handles user-related functionalities
+│   ├── lib/
+│   │   └──mysql-connector-j-9.1.0.jar # MySQL Connector library
 │   ├── library/
 │   │   ├── Books.java              # Represents book data structure
 │   │   └── User.java               # Represents user data structure
@@ -53,15 +55,6 @@ Library/
 │       ├── AdminPane.fxml          # Admin panel UI
 │       ├── AuthPane.fxml           # Authentication UI
 │       └── UserPane.fxml           # User panel UI
-│
-├── lib/
-│   └── mysql-connector-j-9.1.0.jar # MySQL Connector library
-│
-├── resources/
-│   ├── styles.css                  # CSS for styling JavaFX application
-│   ├── icons/                      # Icons used in the UI
-│   └── pdfs/                       # Sample PDF files for books
-│
 └── module-info.java                # Module dependencies for JavaFX and MySQL
 ```
 
@@ -82,6 +75,19 @@ Library/
 
 ### **Security Features**
 - **Password Hashing:** MD5 hashing for securely storing user passwords.
+
+---
+
+## 🖼️ User Interface Screenshots
+
+### 1. Admin Panel
+![Admin Panel](https://github.com/Yeldos-IT/Library-Management-System/blob/main/Resources/AdminPanel.png)
+
+### 2. User Panel
+![User Panel](https://github.com/Yeldos-IT/Library-Management-System/blob/main/Resources/UserPanel.png)
+
+### 3. Login Screen
+![Login Screen](https://github.com/Yeldos-IT/Library-Management-System/blob/main/Resources/Authentication.png)
 
 ---
 
@@ -151,10 +157,6 @@ Library/
 | `username`| VARCHAR(255)| Username            |
 | `password`| VARCHAR(255)| Password (hashed)   |
 | `role`    | VARCHAR(50) | User role (e.g., admin, user) |
-
----
-
-![User Interface Example](https://via.placeholder.com/800x400?text=Library+Management+UI)
 
 ---
 
